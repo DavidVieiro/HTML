@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title>Formularios</title>
+        <meta charset="UTF-8" />
+        <!-- David Vieiro Pazos -->
+    </head>
+    <body>
+        <form method="GET" action="_self">
+            <table border="1" bgcolor="pink" align="center">
+                <tr>
+                    <td>
+                        Nombre de usuario
+                        <input type="text" name="usuario" />
+                        <br>
+                        Contraseña
+                        <input type="password" name="password" />
+                    </td>
+                    <td>
+                        Grupo:
+                        <br>
+                        <input type="radio" name="grupo" checked="checked" />
+                        DAM 1
+                        <br>
+                        <input type="radio" name="grupo" />
+                        ASI 1
+                        <br>
+                        <input type="radio" name="grupo" />
+                        SMR 1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Módulos en los que estoy matriculado:
+                        <br>
+                        <input type="checkbox" name="leng_marcas" checked="checked" />
+                        L.M.
+                        <br>
+                        <input type="checkbox" name="programacion" />
+                        PR
+                        <br>
+                        <input type="checkbox" name="fol" />
+                        FOL
+                    </td>
+                    <td>
+                        Módulo que más me gusta:
+                        <br>
+                        <input type="radio" name="mejor_modulo" value="leng_marcas" />
+                        L.M.
+                        <br>
+                        <input type="radio" name="mejor_modulo" value="programacion"/>
+                        PR
+                        <br>
+                        <input type="radio" name="mejor_modulo" value="fol" />
+                        FOL
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Iniciar Sesión" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <hr>
+
+        <h3>Rellena tu CV</h3>
+        <form method="GET" action="_self">
+            <fieldset>
+                <legend>Datos personales</legend>
+                Provincia
+                <br>
+                <select name="provincia">
+                    <option selected="selected" disabled="disabled">- selecciona -</option>
+                    <option>A Coruña</option>
+                    <option>Lugo</option>
+                    <option>Ourense</option>
+                    <option>Pontevedra</option>
+                </select>
+                <br><br>
+                Fecha de nacimiento
+                <br>
+                <input type="text" name="dia_nac" size="1" maxlength="2" />
+                de
+                <select name="mes_nac">
+                    <option>Enero</option>
+                    <option>Febrero</option>
+                    <option>Noviembre</option>
+                    <option>Dicciembre</option>
+                </select>
+                de
+                <input type="text" name="ano_nac" size="2" maxlength="4" />
+                <br><br>
+                Temas de interés
+                <br>
+                <select name="temas" multiple="multiple" size="5">
+                    <option>Administración de bases de datos</option>
+                    <option>Análisis y programación</option>
+                    <option>Arquitectura</option>
+                    <option>Calidad</option>
+                    <option>ERP, CRM, Business Intelligence</option>
+                    <option>Historia</option>
+                    <option>Deportes</option>
+                </select>
+                <br><br>
+                <input type="submit" value="Enviar" />
+            </fieldset>
+            
+        </form>
+
+        <hr>
+
+        <h3>Rellena tu CV</h3>
+        <form method="GET" action="_self">
+            Nombre
+            <br>
+            <input type="text" name="nombre" />
+            <br>
+            Apellidos
+            <br>
+            <input type="text" name="apellidos" size="40" />
+            <br>
+            Contraseña
+            <br>
+            <input type="password" name="password" />
+            <br>
+            DNI
+            <br>
+            <input type="text" name="dni" maxlength="9" size="6" />
+            <br>
+            Sexo
+            <br>
+            <input type="radio" name="sexo" value="hombre" checked="checked" />
+            Hombre
+            <br>
+            <input type="radio" name="sexo" value="mujer" />
+            Mujer
+            <br><br>
+            <input type="checkbox" name="boletin" checked="checked" />
+            Suscribirme al boletín de novedades
+            <br><br>
+            <input type="submit" value="Guardar Cambios" />
+            <input type="reset" value="Borrar los datos introducidos" />
+        </form>
+
+        <hr>
+
+        <h3>Información sobre el producto</h3>
+        <form method="GET" action="_self">
+            <fieldset>
+                <legend>Datos básicos</legend>
+                Nombre
+                <br>
+                <input type="text" name="nombre" />
+                <br><br>
+                Descripción
+                <br>
+                <textarea name="descripcion" rows="7" cols="50"></textarea>
+                <br><br>
+                <input type="checkbox" name="contador" />
+                Añadir contador de visitas
+            </fieldset>
+            <fieldset>
+                <legend>Datos económicos</legend>
+                Precio
+                <input type="text" name="precio" size="5" />
+                &nbsp;€
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Impuestos
+                <select name="impuestos">
+                    <option>4%</option>
+                    <option>7%</option>
+                    <option>16%</option>
+                    <option>25%</option>
+                </select>
+                <br><br>
+                Promoción
+                <br>
+                <input type="radio" name="promocion" value="ninguno" checked="checked" />
+                Ninguno
+                <br>
+                <input type="radio" name="promocion" value="trans_gratis" />
+                Transporte gratuito
+                <br>
+                <input type="radio" name="promocion" value="descuento5" />
+                Descuento 5%
+                <br><br>
+            </fieldset>
+            <input type="submit" value="Enviar Producto" />
+        </form>
+
+        <hr>
+
+        <form action="_self" method="GET">
+            ¿Qué animal te gusta más?
+            <br>
+            <select name="mejor_animal">
+                <option disabled="disabled" selected="selected">Seleccione un animal</option>
+                <option>Koala</option>
+                <option>Gato</option>
+                <option>Perro</option>
+                <option>Pájaro</option>
+                <option>Tortuga</option>
+                <option>Serpiente</option>
+            </select>
+            <br><br>
+            ¿Qué animales te gustan?
+            <br>
+            <select name="animales" multiple="multiple" size="6">
+                <optgroup label="Doméstico">
+                    <option>Gato</option>
+                    <option>Perro</option>
+                    <option>Pájaro</option>
+                    <option>Tortuga</option>
+                </optgroup>
+                <optgroup label="No doméstico">
+                    <option>Serpiente</option>
+                    <option>Koala</option>
+                </optgroup>
+            </select>
+            <br><br>
+            <input type="submit" value="Enviar Animales" />
+        </form>
+    </body>
+</html>
