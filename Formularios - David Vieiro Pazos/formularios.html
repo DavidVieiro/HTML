@@ -127,7 +127,10 @@
             DNI
             <br>
             <input type="text" name="dni" maxlength="9" size="6" />
-            <br>
+			<br><br>
+			Incluir mi foto &nbsp;
+			<input type="file" name="foto" enctype="multipart/form-data" />
+            <br><br>
             Sexo
             <br>
             <input type="radio" name="sexo" value="hombre" checked="checked" />
@@ -146,7 +149,7 @@
         <hr>
 
         <h3>Información sobre el producto</h3>
-        <form method="GET" action="_self">
+        <form method="POST" action="_self" enctype="multipart/form-data">
             <fieldset>
                 <legend>Datos básicos</legend>
                 Nombre
@@ -156,6 +159,9 @@
                 Descripción
                 <br>
                 <textarea name="descripcion" rows="7" cols="50"></textarea>
+				<br><br>
+				Foto &nbsp;
+				<input type="file" name="foto" />
                 <br><br>
                 <input type="checkbox" name="contador" />
                 Añadir contador de visitas
@@ -191,7 +197,7 @@
 
         <hr>
 
-        <form action="_self" method="GET">
+        <form action="_self" method="POST" enctype="multipart/form-data">
             ¿Qué animal te gusta más?
             <br>
             <select name="mejor_animal">
@@ -219,7 +225,7 @@
                 </optgroup>
             </select>
             <br><br>
-            <input type="submit" value="Enviar Animales" />
+            <input type="image" name="Enviar" alt="Enviar" src="imagenes/boton_enviar.png" />
         </form>
     </body>
 </html>
