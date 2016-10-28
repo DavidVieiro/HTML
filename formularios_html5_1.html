@@ -1,21 +1,48 @@
+<?php
+	/*
+		- Ponemos foco en el email
+		- Añadimos un boton bonito de enviar, una imagen
+		- Cambiamos el submit que cambie el metodo a POST, que no autovalide
+		- Valor por defecto de email @gmail.com
+		- Añado un campo nombre obligatorio
+	
+	*/
+?>
 <!DOCTYPE HTML>
 <html lang="es">
 	<head>
     	<title>Ejemplo de formulario GET</title>
 		<meta charset="UTF-8">
+		<!-- David Vieiro Pazos -->
 	</head>
 	<body>
-		<form method="get" action="formularios_html5_1.html">
+		<form method="GET" action="formularios_html5_1.html" autovalidate="on">
 			<div align="center">
 				<div width="50%">
+					<datalist id="provincias">
+						<option>A Coruña</option>
+						<option>Lugo</option>
+						<option>Pontevedra</option>
+						<option>Ourense</option>
+					</datalist>
+					
+					Nombre:
+					<input type="text" name="nombre" required />
+					<br><br>
 					Color Preferido:
 					<input type="color" name="colores" />
 					<br><br>
 					Fecha de Nacimiento:
 					<input type="date" name="fecha" />
 					<br><br>
+					Provincia de Nacimiento:
+					<input list="provincias" name="prov_nac" />
+					<br><br>
+					Provincia de Residencia:
+					<input list="provincias" name="prov_res" />
+					<br><br>
 					Email
-					<input type="email" name="correo" />
+					<input type="email" name="correo" value="@gmail.com" autofocus />
 					<br><br>
 					URL de las Entregas
 					<input type="url" name="url" />
@@ -33,8 +60,9 @@
 					<input type="search" name="buscar" />
 					<br><br>
 					<center>
-						<input type="submit" value="Enviar" />
+						<input type="image" value="Enviar" src="imagenes/boton_enviar.png" width="92px" height="28" />
 						<input type="reset" value="Restablecer" />
+						<input type="submit" value="Enviar Method POST" formmethod="POST" autovalidate="off" />
 					</center>
 				<div>
 			</div>
