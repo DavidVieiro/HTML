@@ -5,6 +5,7 @@
 		- Cambiamos el submit que cambie el metodo a POST, que no autovalide
 		- Valor por defecto de email @gmail.com
 		- Añado un campo nombre obligatorio
+		- Edad con sugerencia 99
 	
 	*/
 ?>
@@ -42,7 +43,7 @@
 					<input list="provincias" name="prov_res" />
 					<br><br>
 					Email
-					<input type="email" name="correo" value="@gmail.com" autofocus />
+					<input type="email" name="correo" value="@gmail.com" autofocus multiple />
 					<br><br>
 					URL de las Entregas
 					<input type="url" name="url" />
@@ -51,7 +52,7 @@
 					<input type="month" name="mes" />
 					<br><br>
 					Edad entre 18 y 50
-					<input type="number" name="numero" min="18" max="50" />
+					<input type="number" name="numero" min="18" max="50" placeholder="99" />
 					<br><br>
 					Valoracion del Curso
 					<input type="range" name="rango" min="0" max="10" step="5" />
