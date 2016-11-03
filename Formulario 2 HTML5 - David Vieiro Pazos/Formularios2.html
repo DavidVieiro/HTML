@@ -1,0 +1,293 @@
+<html>
+	<head>
+		<title>Formularios HTML5</title>
+		<meta charset="UTF-8" />
+		<!-- David Vieiro Pazos -->
+	</head>
+	<body>
+		<h3>Ejemplo formulario</h3>
+		<h1 align="center">ENCUESTA INFORMATICA</h1>
+		<form method="GET" action="Formularios2.html">
+			<datalist id="internet">
+				<option>Módem</option>
+				<option>ADSL</option>
+				<option>Cable</option>
+				<option>Otros</option>
+			</datalist>
+			<datalist id="curso">
+				<option>Primaria</option>
+				<option>Secundaria</option>
+				<option>Bachillerato</option>
+				<option>Ciclo grado medio</option>
+				<option>Ciclo grado superior</option>
+				<option>Diplomatura</option>
+				<option>Licenciatura</option>
+				<option>Doctorado</option>
+			</datalist>
+			<datalist id="numDias">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+			</datalist>
+			<datalist id="numHoras">
+				<option>Menos de 1 hora</option>
+				<option>Entre 1 y 2 horas</option>
+				<option>Entre 2 y 3 horas</option>
+				<option>Más de 3 horas</option>
+			</datalist>
+			<datalist id="discoDuro">
+				<option>Menos de 250 GB</option>
+				<option>250 GB o más</option>
+				<option>500 GB o más</option>
+			</datalist>
+			<datalist id="marcaProce">
+				<option>Intel</option>
+				<option>AMD</option>
+				<option>Otros</option>
+			</datalist>
+			<datalist id="antiguedad">
+				<option>Menos de 1 años</option>
+				<option>Entre 1 y 2 años</option>
+				<option>Entre 2 y 4 años</option>
+				<option>Más de 4 años</option>
+			</datalist>
+			<datalist id="memoriaRam">
+				<option>menos de 1 GB</option>
+				<option>1 GB o más</option>
+				<option>2 GB o más</option>
+				<option>4 GB o más</option>
+			</datalist>
+			<datalist id="velocidad">
+				<option>Menos de 1,5GHz</option>
+				<option>1,5GHz o más</option>
+				<option>2,5GHz o más</option>
+			</datalist>
+			<fieldset>
+				<legend>Datos personales</legend>
+				Edad:
+				&nbsp;
+				<input size="2" maxlength="3" name="edad" />
+				&nbsp;
+				Sexo:
+				&nbsp;
+				<input type="radio" name="Sexo" value="H" />
+				Hombre
+				&nbsp;
+				<input type="radio" name="Sexo" value="M" />
+				Mujer
+				&nbsp;
+				Estás estudiando:
+				&nbsp;
+				<input name="curso" list="curso" />
+			</fieldset>
+			<fieldset>
+				<legend>Preguntas generales</legend>
+				¿Tienes ordenador en tu casa?
+				<input type="radio" name="ordenador" value="S" />
+				Si
+				<input type="radio" name="ordenador" value="N" />
+				No
+				<br><br>
+				¿Lo utilizas solo tu o lo compartes con otras personas?
+				<input type="radio" name="compartir" value="Propio" />
+				Propio
+				<input type="radio" name="compartir" value="Compartido" />
+				Compartido
+				<br><br>
+				En períodos de clase:
+				<br>
+				<ul>
+					<li>
+						¿Cuántos días a la semana sueles enceder el ordenador?
+						<input name="claseD" size="1" list="numDias" />
+					</li>
+					<br>
+					<li>
+						¿Cuántas horas diarias sueles gastar el ordenador(cada día)?
+						<input name="claseH" list="numHoras" />
+					</li>
+				</ul>
+				En periodo de vacaciones:
+				<br>
+				<ul>
+					<li>
+						¿Cuántos días a la semana sueles enceder el ordenador?
+						&nbsp;
+						<input name="claseD" size="1" list="numDias" />
+					</li>
+					<br>
+					<li>
+						¿Cuántas horas diarias sueles gastar el ordenador(cada día)?
+						<input name="claseH" list="numHoras" />
+					</li>
+				</ul><br>
+				¿A qué  dedicas tu tiempo en el ordenador?
+				<br><br>
+				<input type="checkbox" name="escribir" value="escribir" />
+				Escribir
+				<input type="checkbox" name="dibujar" value="dibujar" />
+				Dibujar
+				<input type="checkbox" name="programar" value="Programar" />
+				Programar
+				<input type="checkbox" name="hacerMusica" value="Hacer música" />
+				Hacer música
+				<input type="checkbox" name="retFoto" value="Retoque fotográfico" />
+				Retoque fotográfico
+				<br>
+				<input type="checkbox" name="jugar" value="Jugar" />
+				Jugar
+				<input type="checkbox" name="pagWeb" value="Ver páginas web" />
+				Ver páginas web
+				<input type="checkbox" name="chatear" value="Chatear" />
+				Chatear
+				<input type="checkbox" name="interMusica" value="Intercambiar música" />
+				Intercambiar música
+				<input type="checkbox" name="interPelis" value="Intercambiar películas/series" />
+				Intercambiar películas/series
+				<br><br>
+				Otras actividades (especifica):
+				<input type="text" name="otro1"/>
+				&nbsp;
+				<input type="text" name="otro2"/>
+				&nbsp;
+				<input type="text" name="otro3"/>
+			</fieldset>
+			<fieldset>
+				<legend>Descripción</legend>
+				Tipo:<input type="radio" name="ordenador" value="sobremesa" />
+				Sobremesa-
+					<input type="radio" name="ordenador" value="portatil" />
+					Portátil-
+					<input type="radio" name="ordenador" value="tabletPC" />
+					Tablet PC
+					<br><br>
+					Antigüedad:<input name="antiguedad" list="antiguedad" />
+					<br><br>
+					<input type="radio" name="marca" value="marcaProce" />
+					Sin marca
+					<input type="radio" name="marca" value="marcaOrdenador" />
+					De marca(especificar):
+					<input type="text" name="especificar" />
+					<br><br>
+					Procesador: Marca <input name="procesador" list="marcaProce" />
+					- Modelo:
+					<select name="modeloProce">
+						<option selected="selected" disabled="disabled"></option>
+						<optgroup label="Intel">
+							<option>Pentium III o anterior</option>
+							<option>Pentium IV</option>
+							<option>Pentium Core2</option>
+							<option>Celeron</option>
+							<option>Otro</option>
+						</optgroup>
+						<optgroup label="AMD">
+							<option>Athlon XP o anterior</option>
+							<option>Athlon 64</option>
+							<option>Athlon 64 X2</option>
+							<option>Sempron</option>
+							<option>Duron</option>
+							<option>Otro</option>
+						</optgroup>
+					</select>
+					- Velocidad:
+					&nbsp;
+					<input name="velocidad" list="velocidad"/>
+					<br><br>
+					Memoria RAM:
+					&nbsp;
+					<input name="memoriaRam" list="memoriaRam"/>
+					<br><br>
+					Disco duro:
+					&nbsp;
+					<input name="discoDuro" list="discoDuro"/>
+					<br><br>
+					CD/DVD:
+					<input type="checkbox" name="cd-rom" value="cd-rom"/>
+					CD-ROM -
+					<input type="checkbox" name="cd-rw" value="cd-rw"/>
+					CD-RW -
+					<input type="checkbox" name="dvd-rom" value="dvd-rom"/>
+					DVD-ROM -
+					<input type="checkbox" name="dvd-rw" value="dvd-rw"/>
+					DVD-RW y/o +RW
+					<br><br>
+					Monitor: Tipo
+					<input type="radio" name="monitor" value="crt" />
+					CRT -
+					<input type="radio" name="monitor" value="tft" />
+					TFT -
+					Tamaño:
+					<input type="radio" name="tamano" value="-17" />
+					Menos de 17"
+					<input type="radio" name="tamano" value="17" />
+					17"
+					<input type="radio" name="tamano" value="19" />
+					19"
+					<input type="radio" name="tamano" value="+19" />
+					Más de 19"
+					<br><br>
+					Acceso a Internet:
+					<input name="internet" list="internet" />
+			</fieldset>
+			<br>
+			<input type="submit" value="Enviar Formulario" />
+		</form>
+		<hr>
+		Otro formulario:
+		<br><br>
+		<h3>Formulario de alta</h3>
+		<form action="Formularios2.html" method="GET">
+			<datalist id="provincia">
+				<option>A Coruña</option>
+				<option>Lugo</option>
+				<option>Ourense</option>
+				<option>Pontevedra</option>
+			</datalist>
+			<datalist id="pais">
+				<option>España</option>
+				<option>Portugal</option>
+				<option>Francia</option>
+				<option>Inglaterra</option>
+			</datalist>
+			<b>Nombre y<br>apellidos <font color="red">*</font></b>
+			<input type="text" name="nombre" pattern="[A-Z][a-z]+" required />
+			<br><br>
+			<b>Primer apellido <font color="red">*</font></b>
+			<input type="text" name="primerApellido" pattern="[A-Z][a-z]+" required />
+			<br><br>
+			<b>Segundo apellido <font color="red">*</font></b>
+			<input type="text" name="segundoApellido" pattern="[A-Z][a-z]+" required />
+			<br><br>
+			<b>Dirección <font color="red">*</font></b>
+			<input type="text" name="direccion" size="40" required />
+			<br><br>
+			Código postal
+			<input type="text" name="codigoPos" pattern="[0-9]{5}" size="13" maxlength="5"  />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Municipio
+			<input type="text" name="municipio" size="9" /><br><br>
+			Provincia
+			<input type="text" name="provincia" list="provincia" size="10" />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Pais
+			<input name="pais" list="pais" size="10">
+			<br><br>
+			<b>Email</b>
+			&nbsp;
+			<input type="email" name="email" />
+			<br><br>
+			<b>Teléfono <font color="red">*</font></b>
+			<input type="text" name="telefono" pattern="[0-9]{9}" required size="9" maxlength="9" />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Móvil
+			<input type="text" name="movil" pattern="[0-9]{9}" size="9" maxlength="9" />
+			<br><br>
+			<input type="submit" value="Darme de Alta -->" />
+		</form>
+	</body>
+</html>
