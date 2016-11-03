@@ -1,0 +1,74 @@
+<?php
+	/*
+		- Ponemos foco en el email
+		- Añadimos un boton bonito de enviar, una imagen
+		- Cambiamos el submit que cambie el metodo a POST, que no autovalide
+		- Valor por defecto de email @gmail.com
+		- Añado un campo nombre obligatorio
+		- Edad con sugerencia 99
+	
+	*/
+?>
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+    	<title>Formulario HTML5</title>
+		<meta charset="UTF-8">
+		<!-- David Vieiro Pazos -->
+	</head>
+	<body>
+		<form method="POST" action="formularios_html5_2.html" id="form1">
+			<fieldset>
+				<legend>Formulario HTML5</legend>
+				<datalist id="provincias">
+					<option>A Coruña</option>
+					<option>Lugo</option>
+					<option>Pontevedra</option>
+					<option>Ourense</option>
+				</datalist>
+				
+				Nombre:
+				<input type="text" name="nombre" required pattern="[A-Za-z]+" />
+				<br><br>
+				Color Preferido:
+				<input type="color" name="colores" />
+				<br><br>
+				Fecha de Nacimiento:
+				<input type="date" name="fecha" />
+				<br><br>
+				Provincia de Nacimiento:
+				<input list="provincias" name="prov_nac" />
+				<br><br>
+				Provincia de Residencia:
+				<input list="provincias" name="prov_res" />
+				<br><br>
+				Email
+				<input type="email" name="correo" value="@gmail.com" autofocus multiple />
+				<br><br>
+				URL de las Entregas
+				<input type="url" name="url" />
+				<br><br>
+				En que mes empece este curso:
+				<input type="month" name="mes" />
+				<br><br>
+				Edad entre 18 y 50
+				<input type="number" name="numero" min="18" max="50" placeholder="99" />
+				<br><br>
+				Valoracion del Curso
+				<input type="range" name="rango" min="0" max="10" step="5" />
+				<br><br>
+				Datos a Buscar
+				<input type="search" name="buscar" />
+				<br><br>
+				<input type="submit" value="Enviar Método GET y no validar" formmethod="GET" formnovalidate />
+				<br>
+				<input type="submit" value="Enviar y abrir en nueva ventana" formtarget="_blank" />
+				<br>
+				<input type="image" value="Enviar" src="imagenes/boton_enviar.png" width="92px" height="28" />
+			</fieldset>
+		</form>
+		<br>
+		<input type="checkbox" name="info" form="form1" />
+		Enviar información.
+	</body>
+</html>
